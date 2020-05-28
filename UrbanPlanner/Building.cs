@@ -27,14 +27,6 @@ namespace UrbanPlanner
             _owner = name;
         }
 
-        public void showBuilding(Building building)
-        {
-            Console.WriteLine(_address);
-            Console.WriteLine("-----------");
-            Console.WriteLine($"Designed by {_designer}");
-            Console.WriteLine($"Constructed on ");
-
-        }
         public Building(string address)
         {
             _address = address;
@@ -43,8 +35,13 @@ namespace UrbanPlanner
         public override string ToString()
         {
             return $@"
-            
-            "
+            {_address}
+            -----------------
+            Designed By {_designer}
+            Constructed on {_dateConstructed}
+            Owned by {_owner}
+            {Volume} cubic meters of space
+            ";
         } 
     }
 }

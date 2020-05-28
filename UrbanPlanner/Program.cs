@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace UrbanPlanner
 {
@@ -27,7 +28,7 @@ namespace UrbanPlanner
             List<Building> Buildings = new List<Building>()
             {
                 Carillon,Icon,RedBrickLodge
-            }
+            };
             
             Carillon.Contruct();
             Icon.Contruct();
@@ -35,6 +36,11 @@ namespace UrbanPlanner
             Carillon.Purchase("Tony Stark");
             Icon.Purchase("Donald Trump");
             RedBrickLodge.Purchase("Grandma");
+            
+            foreach (Building building in Buildings)
+            {
+                Console.WriteLine(building);
+            }
 
 
         }
